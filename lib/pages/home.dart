@@ -16,8 +16,8 @@ class HomePage extends StatelessWidget {
             left: 15,
           ),
           child: Container(
-            height: 190,
-            width: 500,
+            height: 1100,
+            width: 1000,
             color: Colors.white,
             child: Column(children: [
               const Text(
@@ -36,6 +36,73 @@ class HomePage extends StatelessWidget {
                       style: TextStyle(fontSize: 18, color: Color(0xffA1A4B2)),
                     ),
                   )),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Container(
+                    height: 300,
+                    width: 300,
+                    child: ElevatedButton(
+                        onPressed: () => {},
+                        style: ButtonStyle(
+                            shape: MaterialStatePropertyAll<
+                                    RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(25.0))),
+                            backgroundColor: MaterialStatePropertyAll<Color>(
+                                Color.fromARGB(255, 255, 0, 0))),
+                        child: Column(children: [
+                          Container(
+                            child: Image.asset(
+                              'assets/images/Scan-icon.png',
+                              height: 260,
+                              width: 260,
+                              alignment: Alignment.center,
+                            ),
+                          ),
+                          Text(
+                            "Scan Documents",
+                            style: TextStyle(
+                              fontFamily: 'AbhayaLibre',
+                              fontSize: 25,
+                            ),
+                          ),
+                        ])),
+                  ),
+                  Container(
+                    padding: EdgeInsets.only(top: 30),
+                    height: 320,
+                    width: 300,
+                    child: ElevatedButton(
+                        onPressed: () => {},
+                        style: ButtonStyle(
+                            shape: MaterialStatePropertyAll<
+                                    RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(25.0))),
+                            backgroundColor: MaterialStatePropertyAll<Color>(
+                                Color.fromARGB(255, 50, 103, 200))),
+                        child: Column(children: [
+                          Container(
+                            child: Image.asset(
+                              'assets/images/Text-icon.png',
+                              height: 260,
+                              width: 260,
+                              alignment: Alignment.center,
+                            ),
+                          ),
+                          Text(
+                            "Grammer Check",
+                            style: TextStyle(
+                              fontFamily: 'AbhayaLibre',
+                              fontSize: 25,
+                            ),
+                          ),
+                        ])),
+                  ),
+                ],
+              )
             ]),
           ),
         ));

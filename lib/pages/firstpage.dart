@@ -7,33 +7,32 @@ class first extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(150.0),
-        child: AppBar(
-          centerTitle: true,
-          title: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 40),
-            child: Container(
-              width: 300,
-              height: 100,
-              alignment: Alignment.center,
-              child: const Text(
-                "Textify",
-                style: TextStyle(
-                  fontFamily: 'BerkshireSwashire',
-                  color: Color.fromARGB(255, 66, 1, 187),
-                  fontSize: 40,
-                  letterSpacing: 5,
+        appBar: PreferredSize(
+          preferredSize: const Size.fromHeight(150.0),
+          child: AppBar(
+            centerTitle: true,
+            title: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 60),
+              child: Container(
+                width: 300,
+                height: 150,
+                alignment: Alignment.center,
+                child: const Text(
+                  "Textify",
+                  style: TextStyle(
+                    fontFamily: 'BerkshireSwashire',
+                    color: Color.fromARGB(255, 66, 1, 187),
+                    fontSize: 50,
+                    letterSpacing: 5,
+                  ),
                 ),
               ),
             ),
+            backgroundColor: Colors.white,
+            elevation: 0.0,
           ),
-          backgroundColor: Colors.white,
-          elevation: 0.0,
         ),
-      ),
-      body: Column(
-        children: [
+        body: Column(children: [
           Image.asset('assets/images/Textify.jpg'),
           const Text(
             "We are What we do",
@@ -55,10 +54,9 @@ class first extends StatelessWidget {
             width: 350,
             height: 50,
             child: Container(
-              foregroundDecoration:
-                  BoxDecoration(borderRadius: BorderRadius.circular(10)),
+              foregroundDecoration: const BoxDecoration(),
               child: ElevatedButton(
-                style: ButtonStyle(
+                style: const ButtonStyle(
                     backgroundColor: MaterialStatePropertyAll<Color>(
                         Color.fromARGB(255, 129, 77, 239))),
                 onPressed: () {},
@@ -74,22 +72,27 @@ class first extends StatelessWidget {
               ),
             ),
           ),
-          const Row(
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                "Already have an Account?Log in",
+                "Already have an Account?",
                 style: TextStyle(
                   fontFamily: 'AdhayaLibre',
                   fontStyle: FontStyle.normal,
                   fontWeight: FontWeight.w300,
                 ),
               ),
+              TextButton(
+                child: Text(
+                  "Log in",
+                  style: TextStyle(color: Colors.blue),
+                ),
+                onPressed: () => {},
+              )
             ],
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-          )
-        ],
-      ),
-    );
+          ),
+        ]));
   }
 }
