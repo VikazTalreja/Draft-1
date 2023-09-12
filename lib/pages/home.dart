@@ -87,18 +87,23 @@ class HomePage extends StatelessWidget {
                           Container(
                             child: Image.asset(
                               'assets/images/Text-icon.png',
-                              height: 260,
+                              height: 240,
                               width: 260,
                               alignment: Alignment.center,
                             ),
                           ),
-                          Text(
-                            "Grammer Check",
-                            style: TextStyle(
-                              fontFamily: 'AbhayaLibre',
-                              fontSize: 25,
+                          TextButton(
+                            onPressed: () => {
+                              Navigator.pushNamed(context, '/Third'),
+                            },
+                            child: Text(
+                              "Grammer Check",
+                              style: TextStyle(
+                                  fontFamily: 'AbhayaLibre',
+                                  fontSize: 25,
+                                  color: Colors.white),
                             ),
-                          ),
+                          )
                         ])),
                   ),
                 ],

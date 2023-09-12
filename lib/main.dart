@@ -1,17 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/pages/Grammer_Check.dart';
+import 'package:my_app/pages/firstpage.dart';
+import 'package:my_app/pages/home.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-        debugShowCheckedModeBanner: false, home: Grammer());
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      initialRoute: '/', // Define the initial route
+      routes: {
+        '/': (context) => first(), // Define the '/' route
+        '/Second': (context) => HomePage(),
+        '/Third': ((context) => Grammer()), // Define additional routes here
+      },
+    );
   }
 }

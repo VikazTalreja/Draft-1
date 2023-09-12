@@ -59,7 +59,9 @@ class first extends StatelessWidget {
                 style: const ButtonStyle(
                     backgroundColor: MaterialStatePropertyAll<Color>(
                         Color.fromARGB(255, 129, 77, 239))),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/Second');
+                },
                 child: const Text(
                   "Sign Up",
                   style: TextStyle(
